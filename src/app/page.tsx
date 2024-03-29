@@ -1,4 +1,6 @@
 import {AboutUsData,ServicesData} from "../../components/HomePageData";
+import Footer from "../../components/Footer";
+import Testimonial from "../../components/Testimonial";
 import Image from "next/image";
 export default function Home() {
   const someStyle = {
@@ -8,7 +10,7 @@ export default function Home() {
     fontFamily : 'Open Sans, sans-serif',
   }
   return (
-    <div className="flex flex-col gap-y-20 justify-center items-center text-center">
+    <div className="flex flex-col justify-center items-center text-center">
       <div className="relative">
             <Image
                 src="/home.png"
@@ -20,7 +22,18 @@ export default function Home() {
                 style={{ width: '100%', height: '100%' }}
             />
       </div>
-      <div className="flex flex-col justify-center items-center text-center">
+      <div className="relative min-h-screen">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/bg.jpg"
+          alt="Background Image"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+        />
+        <div className="absolute inset-0 bg-white opacity-75"></div>
+      </div>
+      <div className="flex flex-col justify-center items-center text-center relative z-10">
         <div className="flex flex-col justify-center items-center text-center w-3/5 mx-auto py-10">
           <h1 className="text-pink-600 text-3xl font-bold" style={someOtherStyle}>About Us</h1>
           <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>We tailor our event services to your needs, ensuring meticulous management from start to finish.</h1>
@@ -29,7 +42,7 @@ export default function Home() {
         <div className="flex w-4/5 gap-10">
           {AboutUsData.map((item,index)=>(
               <div className="flex flex-col w-1/3 border border-pink-600 border-4 rounded-lg px-5 py-5 hover:bg-pink-600 hover:text-white">
-                <div className="w-1/5 mx-auto bg-gray-300 py-7 justify-center items-center text-center rounded-lg">
+                <div className="w-1/5 mx-auto bg-gray-400 py-7 justify-center items-center text-center rounded-lg">
                 </div>
                 <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>
                   {item.headline}
@@ -39,7 +52,7 @@ export default function Home() {
           ))}
           </div>
       </div>
-      <div className="flex flex-col mt-10">
+      <div className="flex flex-col mt-10 relative z-10">
         <h1 className="text-pink-600 text-2xl font-bold" style={someOtherStyle}>Services</h1>
         {ServicesData.map((item,index)=>(
           <div className="flex flex-col w-full py-6 justify-center text-center items-center mx-auto">
@@ -81,26 +94,24 @@ export default function Home() {
           </div>
         ))}
       </div>
-      <div className="flex flex-col gap-y-6">
-        <div className="flex">
-            <div className="mr-36">
-                <h1 style={someStyle} className="text-4xl text-pink-600">Your vision.</h1>
-            </div>
-        </div>
-        <div className="ml-36">
-            <div>
-                <h1 style={someStyle} className="text-4xl text-pink-600">Our execution.</h1>
-            </div>
-        </div>
+      <div className="flex flex-col relative z-10">
+          <div className="flex flex-col justify-center items-center text-center w-3/5 mx-auto py-10">
+              <h1 className="text-pink-600 text-3xl font-bold" style={someOtherStyle}>Gallery</h1>
+              <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>Magical Memories</h1>
+          </div>
       </div>
-      <div className="flex w-11/12 bg-pink-600 px-12 py-16 rounded-lg">
-          <div className="flex flex-col w-3/5 gap-y-12 justify-start items-left text-left">
-            <h1 style={someStyle} className="text-white text-4xl text-bold">Let us bring your event to life</h1>
-            <h1 style={someStyle} className="text-white text-2xl">Our skilled event planners are dedicated to creating unforgettable experiences for you</h1>
+      <div className="px-10">
+        <Testimonial />
+      </div>
+      <div className="flex flex-col relative z-10">
+          <div className="flex flex-col justify-center items-center text-center w-3/5 mx-auto py-10">
+              <h1 className="text-pink-600 text-3xl font-bold" style={someOtherStyle}>Highlights</h1>
+              <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>Media Coverage</h1>
           </div>
-          <div className="w-2/5 flex justify-center items-center text-center">
-            <button style={someStyle} className="bg-white px-12 py-4 text-pink-600 text-bold text-2xl rounded-lg">Get Started Today</button>
-          </div>
+      </div>
+      <div>
+        <Footer />
+      </div>
       </div>
     </div>
   );
