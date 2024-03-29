@@ -2,6 +2,7 @@ import {AboutUsData,ServicesData} from "../../components/HomePageData";
 import Footer from "../../components/Footer";
 import Testimonial from "../../components/Testimonial";
 import Image from "next/image";
+import Navbar from "../../components/Navbar"
 export default function Home() {
   const someStyle = {
     fontFamily: 'Playfair Display, serif',
@@ -11,7 +12,11 @@ export default function Home() {
   }
   return (
     <div className="flex flex-col justify-center items-center text-center">
-      <div className="relative">
+      {/* <div className="absolute top-0 left-0 right-0 z-10">
+          <Navbar />
+      </div> */}
+      <div className="relative min-h-screen">
+            <div>
             <Image
                 src="/home.png"
                 alt="Example Image"
@@ -21,6 +26,7 @@ export default function Home() {
                 height={1000}
                 style={{ width: '100%', height: '100%' }}
             />
+            </div>
       </div>
       <div className="relative min-h-screen">
       <div className="absolute inset-0 z-0">
@@ -42,7 +48,7 @@ export default function Home() {
         <div className="flex w-4/5 gap-10">
           {AboutUsData.map((item,index)=>(
               <div className="flex flex-col w-1/3 border border-pink-600 border-4 rounded-lg px-5 py-5 hover:bg-pink-600 hover:text-white">
-                <div className="w-1/5 mx-auto bg-gray-400 py-7 justify-center items-center text-center rounded-lg">
+                <div className="w-1/5 mx-auto bg-gray-300 py-7 justify-center items-center text-center rounded-lg">
                 </div>
                 <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>
                   {item.headline}
@@ -94,19 +100,41 @@ export default function Home() {
           </div>
         ))}
       </div>
-      <div className="flex flex-col relative z-10">
+      <div className="flex flex-col relative z-10 px-10">
           <div className="flex flex-col justify-center items-center text-center w-3/5 mx-auto py-10">
               <h1 className="text-pink-600 text-3xl font-bold" style={someOtherStyle}>Gallery</h1>
               <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>Magical Memories</h1>
+          </div>
+          <div>
+            <Image 
+              src="/gallery.png"
+              alt="Example Image"
+              layout="responsive"
+              width={1000}
+              height={1000}
+              className="w-full"
+              style={{ width: '100%', height: '100%' }}
+            />
           </div>
       </div>
       <div className="px-10">
         <Testimonial />
       </div>
-      <div className="flex flex-col relative z-10">
+      <div className="flex flex-col relative z-10 px-10 mb-20">
           <div className="flex flex-col justify-center items-center text-center w-3/5 mx-auto py-10">
               <h1 className="text-pink-600 text-3xl font-bold" style={someOtherStyle}>Highlights</h1>
               <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>Media Coverage</h1>
+          </div>
+          <div>
+            <Image 
+              src="/media.png"
+              alt="Example Image"
+              layout="responsive"
+              width={1000}
+              height={1000}
+              className="w-full"
+              style={{ width: '100%', height: '100%' }}
+            />
           </div>
       </div>
       <div>
