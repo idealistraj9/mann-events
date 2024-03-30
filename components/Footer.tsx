@@ -52,7 +52,7 @@ export default function Footer() {
                         <h1 style={someStyle} className="text-2xl">Career</h1>
                     </div>
                     <div className="flex items-center w-1/12" style={{backgroundColor : "#fb7185"}}>
-                        <h1 className="ml-6" style={{color : "#fb7185"}}>.</h1>
+                        <h1 style={{color : "#fb7185"}}>.</h1>
                     </div>
                 </div>
                 <div className="w-2/5 flex flex-col gap-y-6">
