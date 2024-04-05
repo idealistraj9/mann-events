@@ -76,7 +76,7 @@ export default function Home() {
                 <div className="w-1/2 flex flex-col gap-y-6 justify-left items-left text-left px-14">
                   <h1 style={someStyle} className="text-4xl font-extrabold mb-4">{item.headline}</h1>
                   <h1>{item.content}</h1>
-                  <button className="text-pink-600 px-4 py-4 border border-pink-600 mt-6 rounded-lg w-1/4 font-bold hover:bg-pink-600 hover:text-white">Know More</button>
+                  <button className="text-pink-600 px-2 py-4 border border-pink-600 mt-6 rounded-lg w-1/4 font-bold hover:bg-pink-600 hover:text-white">Know More</button>
                 </div>
               </div>
               ) : (

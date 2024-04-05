@@ -51,7 +51,7 @@ export default function Footer() {
                         <h1 style={someStyle} className="text-2xl">Contact</h1>
                         <h1 style={someStyle} className="text-2xl">Career</h1>
                     </div>
-                    <div className="flex items-center w-1/12" style={{backgroundColor : "#fb7185"}}>
+                    <div className="flex items-center w-1/11" style={{backgroundColor : "#fb7185"}}>
                         <h1 style={{color : "#fb7185"}}>.</h1>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col gap-y-6 justify-center text-center items-center">
                         <h1 style={someStyle} className="text-2xl">Office Address</h1>
-                        <h1 style={someOtherStyle} className="text-xl w-3/5 justify-center text-center items-center">202, Status Complex, Opp. Amrapali Complex, Jay Santhoshi Nagar, Karelibagh, Vadodara, Gujarat 390018</h1>
+                        <h1 style={someOtherStyle} className="text-md w-3/5 justify-center text-center items-center">202, Status Complex, Opp. Amrapali Complex, Jay Santhoshi Nagar, Karelibagh, Vadodara, Gujarat 390018</h1>
                     </div>
                 </div>
             </div>

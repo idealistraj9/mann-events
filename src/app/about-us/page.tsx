@@ -43,13 +43,13 @@ export default function AboutUs() {
           <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>Elevating Experiences : Discovering Our Story</h1>
         </div>
       </div>
-      <div className="flex px-20 relative z-10">
+      <div className="flex px-6 relative z-10">
         <div className="w-1/2 ml-6 justify-center items-center text-center">
         <Image
             src="/navbar_img.png"
             alt="Example Image"
-            width={500}
-            height={500}
+            width={450}
+            height={450}
         />
         </div>
         <div className="flex flex-col gap-y-6 w-1/2 text-left items-left">
@@ -92,7 +92,7 @@ export default function AboutUs() {
         </div>
       <div className="grid grid-cols-2 w-4/5 justify-center text-center items-center mx-auto mt-10 gap-x-12 gap-y-6">
         {WhyChooseUs.map((item,index)=>(
-            <div className="flex flex-col border border-pink-600 border-4 rounded-lg px-5 py-5 hover:bg-pink-600 hover:text-white justify-center text-center items-center">
+            <div className="flex flex-col h-full border border-pink-600 border-4 rounded-lg px-5 py-5 hover:bg-pink-600 hover:text-white justify-center text-center items-center">
             <div className="w-1/5 mx-auto bg-gray-300 py-7 justify-center items-center text-center rounded-lg">
             </div>
             <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>
