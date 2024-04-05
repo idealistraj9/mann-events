@@ -65,7 +65,7 @@ export default function AboutUs() {
             <input type="text" className="py-2 px-2 border-b border-pink-600 bg-transparent text-black placeholder-black" placeholder="Message" />
             </div>
         <div>
-            <button style={someStyle} className="border border-pink-600 py-2 px-16 rounded-lg font-bold  text-xl text-pink-600">Submit</button>
+            <button style={someStyle} className="border border-pink-600 py-2 px-16 rounded-lg font-bold  text-xl text-pink-600 hover:bg-pink-600 hover:text-white">Submit</button>
         </div>
       </div>
       <div className="px-6 flex relative z-10">
