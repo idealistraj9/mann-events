@@ -2,6 +2,7 @@ import {OurServicesImages} from "../../../components/OurServicesImages"
 import Footer from "../../../components/Footer";
 import Testimonial from "../../../components/Testimonial";
 import Image from "next/image";
+import Navbar from "../../../components/Navbar";
 export default function AboutUs() {
     const someStyle = {
         fontFamily: 'Playfair Display, serif',
@@ -11,6 +12,10 @@ export default function AboutUs() {
       }
     return (
         <div className="flex flex-col justify-center items-center text-center">
+          <div className="flex flex-col absolute top-0 left-0 right-0 z-10">
+          <Navbar />
+          <h1 style={someStyle} className="text-white text-5xl mt-20">Crafting Your Dream Wedding, One Detail at a Time</h1>
+      </div>
       <div className="relative min-h-screen">
             <div>
             <Image

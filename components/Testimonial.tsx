@@ -1,10 +1,23 @@
 "use client"
-import {useState} from "react";
 import {TestimonialData} from "./TestimonialData";
 import Image from "next/image";
+import {useState} from "react";
 export default function Testimonial() {
     const size=TestimonialData.length;
-    let i=0,ir=1,il=size-1;
+    const [i,setI]=useState(0);
+    const [il,setIl]=useState(size-1);
+    const [ir,setIr]=useState(1);
+    const shift=(index : any)=>{
+        console.log("function called with : "+index)
+        setI(index);
+        let some=(index-1)%size;
+        if(some<0){
+            some+=size;
+        }
+        setIl(some);
+        let some2=(index+1)%size;
+        setIr(some2);
+    }
     const someStyle = {
     fontFamily: 'Playfair Display, serif',
     };
@@ -103,13 +116,16 @@ export default function Testimonial() {
             <div className="py-6">
             <div className="flex justify-center text-center items-center gap-x-6">
                 {Array.from({ length: size }).map((_, index) => (
+                    <button onClick={()=>shift(index)}>
                     <Image
                         key={index}
                         src={index !== i ? "/lightcircle.png" : "/darkcircle.png"}
                         alt="Example Image"
                         width={index===i ? "17" : "30"}
                         height={index===i ? "17" : "30"}
+                        className="cursor-pointer"
                     />
+                    </button>
                 ))}
             </div>
             </div>

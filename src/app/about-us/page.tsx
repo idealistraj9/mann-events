@@ -1,6 +1,7 @@
 import {WhyChooseUs} from "../../../components/WhyChooseUs";
 import Footer from "../../../components/Footer";
 import Image from "next/image";
+import Navbar from "../../../components/Navbar";
 export default function AboutUs() {
     const someStyle = {
         fontFamily: 'Playfair Display, serif',
@@ -10,9 +11,10 @@ export default function AboutUs() {
       }
     return (
         <div className="flex flex-col justify-center items-center text-center">
-      {/* <div className="absolute top-0 left-0 right-0 z-10">
+      <div className="flex flex-col absolute top-0 left-0 right-0 z-10">
           <Navbar />
-      </div> */}
+          <h1 style={someStyle} className="text-white text-5xl mt-20">Meet the Creative Minds Behind Spectacular Events</h1>
+      </div>
       <div className="relative min-h-screen">
             <div>
             <Image
