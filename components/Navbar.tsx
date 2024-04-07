@@ -32,8 +32,8 @@ export default function Navbar() {
                 <div className="hover:text-pink-600 hover:border-b hover:border-pink-600">
                     <h1 style={someStyle} className="text-xl"><Link href="/about-us">About</Link></h1>
                 </div>
-                <div className="hover:text-pink-600 hover:border-b hover:border-pink-600 relative">
-                    <div onClick={toggleDropdown} className="flex gap-x-2 justify-center text-center items-center mx-auto cursor-pointer">
+                <div className="relative">
+                    <div onClick={toggleDropdown} className="flex gap-x-2 justify-center text-center items-center mx-auto cursor-pointer hover:text-pink-600 hover:border-b hover:border-pink-600 ">
                     <h1
                         style={someStyle}
                         className="text-xl"
@@ -44,11 +44,11 @@ export default function Navbar() {
                     <span><IoIosArrowDown /></span>
                     </div>
                     {isDropdownOpen && (
-                        <div className="absolute bg-white shadow-md mt-1 w-36 rounded-lg border border-pink-600">
+                        <div className="absolute bg-white shadow-md mt-1 w-36 rounded-lg border border-pink-600 hover:text-black">
                             <Link href="/services-wedding" className="block py-2 px-4 hover:bg-gray-100">
                                 <h1 style={someOtherStyle}>Wedding</h1>
                             </Link>
-                            <hr className="border border-black"></hr>
+                            <hr className="border border-pink-600"></hr>
                             <Link href="/services-corporate" className="block py-2 px-4 hover:bg-gray-100">
                                 <h1 style={someOtherStyle}>Corporate</h1>
                             </Link>
