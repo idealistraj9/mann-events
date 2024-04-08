@@ -59,7 +59,7 @@ export default function AboutUs() {
         <h1 style={someStyle} className="text-4xl font-bold">Why Choose Us</h1>
         <div className="grid grid-cols-2 w-3/4 justify-center text-center items-center mx-auto h-full py-10 gap-x-10 gap-y-6">
             {GWhyChooseUs.map((item,index)=>(
-                <div className="flex flex-col border-2 border-pink-600 rounded-lg justify-center text-center items-center py-4 px-4 h-full gap-y-4">
+                <div className="flex flex-col border-2 border-pink-600 rounded-lg justify-center text-center items-center py-4 px-4 h-full gap-y-4 hover:bg-pink-600 hover:text-white">
                     <div className="border border-pink-600 px-1 py-1 rounded-lg bg-white">
                         <Image
                             src={item.image}

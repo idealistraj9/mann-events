@@ -48,8 +48,14 @@ export default function Home() {
         </div>
         <div className="flex w-4/5 gap-10">
           {AboutUsData.map((item,index)=>(
-              <div className="flex flex-col w-1/3 border border-pink-600 border-4 rounded-lg px-5 py-5 hover:bg-pink-600 hover:text-white">
-                <div className="w-1/5 mx-auto bg-gray-300 py-7 justify-center items-center text-center rounded-lg">
+              <div className="flex flex-col w-1/3 border-pink-600 border-4 rounded-lg px-5 py-5 hover:bg-pink-600 hover:text-white">
+                <div className="border border-pink-600 px-1 py-1 rounded-lg bg-white w-1/3 justify-center text-center items-center mx-auto">
+                    <Image
+                        src={item.image}
+                        alt="Background Image"
+                        width={70}
+                        height={70}
+                    />
                 </div>
                 <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>
                   {item.headline}

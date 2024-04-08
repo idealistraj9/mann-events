@@ -1,13 +1,16 @@
 export let AboutUsData = [
     {
+        image : "/tailored.png",
         headline : "Tailored Solution",
         content : "We deliver tailor-made, affordable yet elegant events, understanding and fulfilling our clients' unique requirements."
     },
     {
+        image : "/creative.png",
         headline : "Creative Team",
         content : "Our innovative event organization is led by a friendly team of youthful, imaginative minds, meticulously attentive to detail."
     },
     {
+        image : "/perfect.png",
         headline : "Perfect Event",
         content : "Our speciality is creating amazing events that are professionally executed and customised to your passions and interests."
     }

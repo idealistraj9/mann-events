@@ -1,7 +1,7 @@
-import {WhyChooseUs} from "../../../components/WhyChooseUs";
 import Footer from "../../../components/Footer";
 import Image from "next/image";
 import Navbar from "../../../components/Navbar";
+import { GWhyChooseUs } from "../../../components/WhyChooseUs";
 export default function AboutUs() {
     const someStyle = {
         fontFamily: 'Playfair Display, serif',
@@ -88,22 +88,24 @@ export default function AboutUs() {
         />
         </div>
       </div>
-      <div className="flex flex-col relative z-10 mt-20 mb-20">
-        <div>
-            <h1 style={someStyle} className="text-4xl font-bold">Why Choose Us</h1>
+      <div className="flex flex-col justify-center text-center items-center relative z-10 mt-20">
+        <h1 style={someStyle} className="text-4xl font-bold">Why Choose Us</h1>
+        <div className="grid grid-cols-2 w-3/4 justify-center text-center items-center mx-auto h-full py-10 gap-x-10 gap-y-6">
+            {GWhyChooseUs.map((item,index)=>(
+                <div className="flex flex-col border-2 border-pink-600 rounded-lg justify-center text-center items-center py-4 px-4 h-full gap-y-4 hover:bg-pink-600 hover:text-white">
+                    <div className="border border-pink-600 px-1 py-1 rounded-lg bg-white">
+                        <Image
+                            src={item.image}
+                            alt="Background Image"
+                            width={100}
+                            height={100}
+                        />
+                    </div>
+                    <div style={someOtherStyle} className="font-bold"><h1>{item.headline}</h1></div>
+                    <div style={someOtherStyle}><h1>{item.content}</h1></div>
+                </div>
+            ))}
         </div>
-      <div className="grid grid-cols-2 w-4/5 justify-center text-center items-center mx-auto mt-10 gap-x-12 gap-y-6">
-        {WhyChooseUs.map((item,index)=>(
-            <div className="flex flex-col h-full border border-pink-600 border-4 rounded-lg px-5 py-5 hover:bg-pink-600 hover:text-white justify-center text-center items-center">
-            <div className="w-1/5 mx-auto bg-gray-300 py-7 justify-center items-center text-center rounded-lg">
-            </div>
-            <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>
-              {item.headline}
-            </h1>
-            <h1 style={someStyle}>{item.content}</h1>
-          </div>
-        ))}
-      </div>
       </div>
       <div>
         <Footer />

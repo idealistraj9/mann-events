@@ -1,8 +1,10 @@
+"use client"
 import Image from "next/image";
 import { FaInstagram } from "react-icons/fa6";
 import { RiTwitterXLine } from "react-icons/ri";
 import { SlSocialFacebook } from "react-icons/sl";
 import { ImPinterest2 } from "react-icons/im";
+import { useState } from "react";
 import Link from "next/link";
 export default function Footer() {
     const someStyle = {
@@ -11,6 +13,10 @@ export default function Footer() {
     const someOtherStyle = {
     fontFamily : 'Open Sans, sans-serif',
     }
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
     return (
         <div className="flex flex-col gap-y-20 justify-center items-center text-center py-10 relative z-10">
             <div className="flex flex-col gap-y-6">
@@ -46,10 +52,31 @@ export default function Footer() {
                 </div>
                 <div className="flex h-full w-1/5">
                     <div className="flex flex-col gap-y-6 w-11/12 py-2">
-                        <h1 style={someStyle} className="text-2xl">About</h1>
-                        <h1 style={someStyle} className="text-2xl">Services</h1>
-                        <h1 style={someStyle} className="text-2xl">Contact</h1>
-                        <h1 style={someStyle} className="text-2xl">Career</h1>
+                        <Link href="/about-us"><h1 style={someStyle} className="text-2xl">About</h1></Link>
+                        <div className="relative">
+                            <div onClick={toggleDropdown} className="flex gap-x-2 justify-center text-center items-center mx-auto cursor-pointer">
+                            <h1
+                                style={someStyle}
+                                className="text-2xl"
+                            >
+                                Services
+                                
+                            </h1>
+                            </div>
+                            {isDropdownOpen && (
+                                <div className="absolute bg-white shadow-md mt-1 w-36 rounded-lg border border-pink-600 hover:text-black">
+                                    <Link href="/services-wedding" className="block py-2 px-4 hover:bg-gray-100">
+                                        <h1 style={someOtherStyle}>Wedding</h1>
+                                    </Link>
+                                    <hr className="border border-pink-600"></hr>
+                                    <Link href="/services-corporate" className="block py-2 px-4 hover:bg-gray-100">
+                                        <h1 style={someOtherStyle}>Corporate</h1>
+                                    </Link>
+                                </div>
+                            )}
+                        </div>
+                        <Link href="/contact-us"><h1 style={someStyle} className="text-2xl">Contact</h1></Link>
+                        <Link href="/"><h1 style={someStyle} className="text-2xl">Career</h1></Link>
                     </div>
                     <div className="flex items-center w-1/11" style={{backgroundColor : "#fb7185"}}>
                         <h1 style={{color : "#fb7185"}}>.</h1>
