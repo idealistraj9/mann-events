@@ -34,13 +34,14 @@ export default function Testimonial() {
                 <div className="flex flex-col border border-pink-600 rounded-lg px-4 py-4 w-1/3 justify-center items-center text-center gap-y-6 mt-10">
                     <h1 className="justify-center text-center items-center">{TestimonialData[il].review}</h1>
                     <div className="flex justify-center text-center items-center">
-                        {Array.from({ length: TestimonialData[il].stars }).map((_, index) => (
-                            <Image
-                                src="/star.png"
-                                alt="Example Image"
-                                width={20}
-                                height={20}
-                            />
+                    {Array.from({ length: TestimonialData[il].stars }).map((_, index) => (
+                        <Image
+                            key={`star-${index}`} // Adding a unique key prop
+                            src="/star.png"
+                            alt="Example Image"
+                            width={20}
+                            height={20}
+                        />
                         ))}
                     </div>
                     <div className="flex">
@@ -61,13 +62,14 @@ export default function Testimonial() {
                 <div className="flex flex-col border border-pink-600 rounded-lg px-4 py-4 w-1/3 justify-center items-center text-center gap-y-6">
                     <h1 className="justify-center text-center items-center">{TestimonialData[i].review}</h1>
                     <div className="flex justify-center text-center items-center">
-                        {Array.from({ length: TestimonialData[i].stars }).map((_, index) => (
-                            <Image
-                                src="/star.png"
-                                alt="Example Image"
-                                width={20}
-                                height={20}
-                            />
+                    {Array.from({ length: TestimonialData[i].stars }).map((_, index) => (
+                        <Image
+                            key={`star-${index}`} // Adding a unique key prop
+                            src="/star.png"
+                            alt="Example Image"
+                            width={20}
+                            height={20}
+                        />
                         ))}
                     </div>
                     <div className="flex">
@@ -88,13 +90,14 @@ export default function Testimonial() {
                 <div className="flex flex-col border border-pink-600 rounded-lg px-4 py-4 w-1/3 justify-center items-center text-center gap-y-6 mt-10">
                     <h1 className="justify-center text-center items-center">{TestimonialData[ir].review}</h1>
                     <div className="flex justify-center text-center items-center">
-                        {Array.from({ length: TestimonialData[ir].stars }).map((_, index) => (
-                            <Image
-                                src="/star.png"
-                                alt="Example Image"
-                                width={20}
-                                height={20}
-                            />
+                    {Array.from({ length: TestimonialData[ir].stars }).map((_, index) => (
+                        <Image
+                            key={`star-${ir}-${index}`} // Improved unique key by including `ir`
+                            src="/star.png"
+                            alt="Example Image"
+                            width={20}
+                            height={20}
+                        />
                         ))}
                     </div>
                     <div className="flex">
@@ -115,17 +118,15 @@ export default function Testimonial() {
             </div>
             <div className="py-6">
             <div className="flex justify-center text-center items-center gap-x-6">
-                {Array.from({ length: size }).map((_, index) => (
-                    <button onClick={()=>shift(index)}>
+            {Array.from({ length: size }).map((_, index) => (
+                <button key={index} onClick={() => shift(index)} className="cursor-pointer">
                     <Image
-                        key={index}
-                        src={index !== i ? "/lightcircle.png" : "/darkcircle.png"}
-                        alt="Example Image"
-                        width={index===i ? "17" : "30"}
-                        height={index===i ? "17" : "30"}
-                        className="cursor-pointer"
+                    src={index !== i ? "/lightcircle.png" : "/darkcircle.png"}
+                    alt="Example Image"
+                    width={index === i ? 17 : 30} // Ensure these are numbers
+                    height={index === i ? 17 : 30} // Ensure these are numbers
                     />
-                    </button>
+                </button>
                 ))}
             </div>
             </div>

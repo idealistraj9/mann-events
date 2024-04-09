@@ -51,11 +51,11 @@ export default function AboutUs() {
       <div className="flex flex-col relative z-10 mt-10 mb-20">
         <div className="flex flex-col gap-y-3">
             <h1 style={someStyle} className="text-4xl font-bold">Our Services</h1>
-            <h1 style={someOtherStyle}>From pandit ji to catering, décor to post-wedding services, we've got every aspect of your special day covered seamlessly</h1>
+            <h1 style={someOtherStyle}>From pandit ji to catering, décor to post-wedding services, we&apos;ve got every aspect of your special day covered seamlessly</h1>
         </div>
         <div className="grid grid-cols-4 px-6 gap-x-6 justify-center text-center items-center">
             {OurServicesImages.map((item,index)=>(
-                <div className="border border-pink-600 gap-y-6 rounded-lg px-4 py-4 flex flex-col h-5/6">
+                <div key={index} className="border border-pink-600 gap-y-6 rounded-lg px-4 py-4 flex flex-col h-5/6">
                     <Image
                         src={item.imagelink}
                         alt="Background Image"

@@ -58,20 +58,20 @@ export default function AboutUs() {
       <div className="flex flex-col justify-center text-center items-center relative z-10 mt-20">
         <h1 style={someStyle} className="text-4xl font-bold">Why Choose Us</h1>
         <div className="grid grid-cols-2 w-3/4 justify-center text-center items-center mx-auto h-full py-10 gap-x-10 gap-y-6">
-            {GWhyChooseUs.map((item,index)=>(
-                <div className="flex flex-col border-2 border-pink-600 rounded-lg justify-center text-center items-center py-4 px-4 h-full gap-y-4 hover:bg-pink-600 hover:text-white">
-                    <div className="border border-pink-600 px-1 py-1 rounded-lg bg-white">
-                        <Image
-                            src={item.image}
-                            alt="Background Image"
-                            width={100}
-                            height={100}
-                        />
-                    </div>
-                    <div style={someOtherStyle} className="font-bold"><h1>{item.headline}</h1></div>
-                    <div style={someOtherStyle}><h1>{item.content}</h1></div>
-                </div>
-            ))}
+        {GWhyChooseUs.map((item, index) => (
+          <div key={index} className="flex flex-col border-2 border-pink-600 rounded-lg justify-center text-center items-center py-4 px-4 h-full gap-y-4 hover:bg-pink-600 hover:text-white">
+            <div className="border border-pink-600 px-1 py-1 rounded-lg bg-white">
+              <Image
+                src={item.image}
+                alt="Background Image"
+                width={100}
+                height={100}
+              />
+            </div>
+            <div style={someOtherStyle} className="font-bold"><h1>{item.headline}</h1></div>
+            <div style={someOtherStyle}><h1>{item.content}</h1></div>
+          </div>
+        ))}
         </div>
       </div>
       <div>

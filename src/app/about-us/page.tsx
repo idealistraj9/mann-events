@@ -55,7 +55,7 @@ export default function AboutUs() {
         />
         </div>
         <div className="flex flex-col gap-y-6 w-1/2 text-left items-left">
-            <h1>Mann Events, established in 2018, embodies a dedicated team of event planners who infuse artistry, vision, and meticulous attention to detail into every project. Our commitment to delivering unparalleled satisfaction drives us to craft fulfilling experiences tailored to each client's unique needs. With an innovative approach and creative flair, we ensure the success of every event we undertake.</h1>
+            <h1>Mann Events, established in 2018, embodies a dedicated team of event planners who infuse artistry, vision, and meticulous attention to detail into every project. Our commitment to delivering unparalleled satisfaction drives us to craft fulfilling experiences tailored to each client&apos;s unique needs. With an innovative approach and creative flair, we ensure the success of every event we undertake.</h1>
             <h1>Over the years, Mann Events has had the honor of serving a diverse clientele, spanning corporate sectors, individuals, and non-profit charitable organizations. From pre-wedding celebrations to corporate functions and non-profit fundraisers, we excel in crafting and delivering projects of all sizes and scopes. Our versatility allows us to seamlessly transition between organizing pre-wedding shoots, destination weddings, birthday parties, school events, and more.</h1>
             <h1>Specializing in pre-wedding shoots and destination weddings, Mann Events offers comprehensive wedding services, covering everything from designing flyers and invitation cards to coordinating accommodations, decorations, catering, and beyond. Our ultimate goal is to create events that captivate audiences, ensuring maximum engagement and allowing everyone to cherish and celebrate the special moments of each occasion.</h1>
         </div>
@@ -69,13 +69,13 @@ export default function AboutUs() {
                 <h1 style={someOtherStyle} className="text-2xl justify-center text-center items-center">Director of Mann Events</h1>
             </div>
             <div className="flex flex-col gap-y-6 text-left items-left">
-                <h1>I'm mann limbachiya, and I'm thrilled you've found your way to us. At Mann Events, we're not just planners – we're dreamers, architects of joy, and guardians of tradition.</h1>
-                <h1>Since our inception, I've had the honor of crafting unforgettable moments for clients across India. From the bustling streets of Mumbai to the tranquil backwaters of Kerala, each event is a celebration of culture, love, and unity.</h1>
-                <h1>But what truly lights up my world? Weddings. In India, weddings are more than just ceremonies – they're a symphony of colors, traditions, and emotions. Whether you're dreaming of a regal palace affair or an intimate village celebration, I'm here to bring your vision to life.</h1>
+                <h1>I&apos;m mann limbachiya, and I&apos;m thrilled you&apos;ve found your way to us. At Mann Events, we&apos;re not just planners – we&apos;re dreamers, architects of joy, and guardians of tradition.</h1>
+                <h1>Since our inception, I&apos;ve had the honor of crafting unforgettable moments for clients across India. From the bustling streets of Mumbai to the tranquil backwaters of Kerala, each event is a celebration of culture, love, and unity.</h1>
+                <h1>But what truly lights up my world? Weddings. In India, weddings are more than just ceremonies – they&apos;re a symphony of colors, traditions, and emotions. Whether you&apos;re dreaming of a regal palace affair or an intimate village celebration, I&apos;m here to bring your vision to life.</h1>
                 <h1>With Mann Events, every detail is meticulously curated to ensure your special day is nothing short of perfection. From traditional rituals to modern extravagance, let me be your guide as we embark on this magical journey together.</h1>
             </div>
             <div>
-                <h1 style={someOtherStyle} className="font-bold text-2xl">Let's create memories that will last a lifetime!</h1>
+                <h1 style={someOtherStyle} className="font-bold text-2xl">Let&apos;s create memories that will last a lifetime!</h1>
             </div>
         </div>
         <div>
@@ -91,20 +91,20 @@ export default function AboutUs() {
       <div className="flex flex-col justify-center text-center items-center relative z-10 mt-20">
         <h1 style={someStyle} className="text-4xl font-bold">Why Choose Us</h1>
         <div className="grid grid-cols-2 w-3/4 justify-center text-center items-center mx-auto h-full py-10 gap-x-10 gap-y-6">
-            {GWhyChooseUs.map((item,index)=>(
-                <div className="flex flex-col border-2 border-pink-600 rounded-lg justify-center text-center items-center py-4 px-4 h-full gap-y-4 hover:bg-pink-600 hover:text-white">
-                    <div className="border border-pink-600 px-1 py-1 rounded-lg bg-white">
-                        <Image
-                            src={item.image}
-                            alt="Background Image"
-                            width={100}
-                            height={100}
-                        />
-                    </div>
-                    <div style={someOtherStyle} className="font-bold"><h1>{item.headline}</h1></div>
-                    <div style={someOtherStyle}><h1>{item.content}</h1></div>
-                </div>
-            ))}
+        {GWhyChooseUs.map((item, index) => (
+            <div key={index} className="flex flex-col border-2 border-pink-600 rounded-lg justify-center text-center items-center py-4 px-4 h-full gap-y-4 hover:bg-pink-600 hover:text-white">
+              <div className="border border-pink-600 px-1 py-1 rounded-lg bg-white">
+                <Image
+                  src={item.image}
+                  alt="Background Image"
+                  width={100}
+                  height={100}
+                />
+              </div>
+              <div style={someOtherStyle} className="font-bold"><h1>{item.headline}</h1></div>
+              <div style={someOtherStyle}><h1>{item.content}</h1></div>
+            </div>
+          ))}
         </div>
       </div>
       <div>
