@@ -27,7 +27,7 @@ export default function Testimonial() {
     return (
         <div className="flex flex-col relative z-10">
             <div className="flex flex-col justify-center items-center text-center w-3/5 mx-auto py-10">
-                <h1 className="text-pink-600 text-3xl font-bold" style={someOtherStyle}>Testimonial</h1>
+                <h1 className="text-pink-600 text-4xl font-bold" style={someOtherStyle}>Testimonial</h1>
                 <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>Client Love</h1>
             </div>
             <div className="flex gap-x-6">

@@ -20,7 +20,7 @@ export default function AboutUs() {
             <Image
                 src="/gallerypagebg.png"
                 alt="Example Image"
-                className="w-full"
+                className="w-full mx-auto object-cover"
                 layout="responsive"
                 width={1000}
                 height={1000}

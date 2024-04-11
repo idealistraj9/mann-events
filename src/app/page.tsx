@@ -42,7 +42,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col justify-center items-center text-center relative z-10">
         <div className="flex flex-col justify-center items-center text-center w-3/5 mx-auto py-10">
-          <h1 className="text-pink-600 text-3xl font-bold" style={someOtherStyle}>About Us</h1>
+          <h1 className="text-pink-600 text-4xl font-bold" style={someOtherStyle}>About Us</h1>
           <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>We tailor our event services to your needs, ensuring meticulous management from start to finish.</h1>
           <h1 style={someStyle}>At Mann Events, we blend artistry and precision to deliver fulfilling experiences tailored to our clients needs. Since 2018, we&apos;ve catered to corporate, individual, and charitable sectors, specializaing in a range of events from weddings to corporate functions. With expertise in pre-wedding shoots and destination weddings, we ensure every detail is meticulously executed for a memorable and engaging experience.</h1>
         </div>
@@ -53,8 +53,9 @@ export default function Home() {
                     <Image
                         src={item.image}
                         alt="Background Image"
-                        width={70}
-                        height={70}
+                        width={100}
+                        height={100}
+                        className="justify-center text-center items-center mx-auto"
                     />
                 </div>
                 <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>
@@ -66,7 +67,7 @@ export default function Home() {
           </div>
       </div>
       <div className="flex flex-col mt-10 relative z-10">
-        <h1 className="text-pink-600 text-2xl font-bold" style={someOtherStyle}>Services</h1>
+        <h1 className="text-pink-600 text-4xl font-bold" style={someOtherStyle}>Services</h1>
         {ServicesData.map((item,index)=>(
           <div key={index} className="flex flex-col w-full py-6 justify-center text-center items-center mx-auto">
               {item.side ? (
@@ -109,7 +110,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col relative z-10 px-10">
           <div className="flex flex-col justify-center items-center text-center w-3/5 mx-auto py-10">
-              <h1 className="text-pink-600 text-3xl font-bold" style={someOtherStyle}>Gallery</h1>
+              <h1 className="text-pink-600 text-4xl font-bold" style={someOtherStyle}>Gallery</h1>
               <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>Magical Memories</h1>
           </div>
           <div>
@@ -129,7 +130,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col relative z-10 px-10 mb-20">
           <div className="flex flex-col justify-center items-center text-center w-3/5 mx-auto py-10">
-              <h1 className="text-pink-600 text-3xl font-bold" style={someOtherStyle}>Highlights</h1>
+              <h1 className="text-pink-600 text-4xl font-bold" style={someOtherStyle}>Highlights</h1>
               <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>Media Coverage</h1>
           </div>
           <div>
