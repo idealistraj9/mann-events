@@ -3,6 +3,11 @@ import Footer from "../../components/Footer";
 import Testimonial from "../../components/Testimonial";
 import Image from "next/image";
 import Navbar from "../../components/Navbar"
+import { Style_Script } from "next/font/google";
+const stylescript=Style_Script({
+  weight : "400",
+  subsets : ["latin"]
+})
 export default function Home() {
   const someStyle = {
     fontFamily: 'Playfair Display, serif',
@@ -14,7 +19,7 @@ export default function Home() {
     <div className="flex flex-col justify-center items-center text-center">
       <div className="flex flex-col absolute top-0 left-0 right-0 z-10">
           <Navbar />
-          <h1 style={someStyle} className="text-white text-5xl mt-20">Discover the Magic of Unforgettable Event</h1>
+          <h1 className={`${stylescript.className} text-white text-6xl mt-20`}>Discover the Magic of Unforgettable Event</h1>
       </div>
       <div className="relative min-h-screen">
             <div>
@@ -111,7 +116,7 @@ export default function Home() {
       <div className="flex flex-col relative z-10 px-10">
           <div className="flex flex-col justify-center items-center text-center w-3/5 mx-auto py-10">
               <h1 className="text-pink-600 text-4xl font-bold" style={someOtherStyle}>Gallery</h1>
-              <h1 className="text-4xl font-extrabold mb-5 mt-5" style={someStyle}>Magical Memories</h1>
+              <h1 className="text-5xl font-extrabold mb-5 mt-5" style={someStyle}>Magical Memories</h1>
           </div>
           <div>
             <Image 

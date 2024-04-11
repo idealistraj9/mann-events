@@ -3,6 +3,11 @@ import Footer from "../../../components/Footer";
 import Testimonial from "../../../components/Testimonial";
 import Image from "next/image";
 import Navbar from "../../../components/Navbar";
+import { Style_Script } from "next/font/google";
+const stylescript=Style_Script({
+  weight : "400",
+  subsets : ["latin"]
+})
 export default function AboutUs() {
     const someStyle = {
         fontFamily: 'Playfair Display, serif',
@@ -14,7 +19,7 @@ export default function AboutUs() {
         <div className="flex flex-col justify-center items-center text-center">
           <div className="flex flex-col absolute top-0 left-0 right-0 z-10">
           <Navbar />
-          <h1 style={someStyle} className="text-white text-5xl mt-20">Crafting Your Dream Wedding, One Detail at a Time</h1>
+          <h1 className={`${stylescript.className} text-white text-6xl mt-20`}>Crafting Your Dream Wedding, One Detail at a Time</h1>
       </div>
       <div className="relative min-h-screen">
             <div>
@@ -45,7 +50,7 @@ export default function AboutUs() {
           <h1 className="text-pink-600 text-4xl font-bold" style={someOtherStyle}>Wedding</h1>
           <h1 className="text-3xl font-extrabold mb-5 mt-5" style={someStyle}>Where Love Blooms and Dreams Take Flight – Let Mann Events Craft Your Perfect Wedding Story</h1>
           <h1 style={someOtherStyle}>At Mann Events, weddings are our passion and specialty. With meticulous attention to detail and boundless creativity, we transform your vision into an unforgettable reality. From enchanting décor to exquisite cuisine, we handle every aspect of your special day with precision and care, ensuring a seamless and magical experience for you and your loved ones. Trust Mann Events to craft the wedding of your dreams, where love blooms and memories are made to last a lifetime.</h1>
-          <button style={someStyle} className="text-pink-600 text-2xl rounded-lg px-8 py-4 border border-pink-600 hover:bg-pink-600 hover:text-white">Get Started Today</button>
+          <button style={someStyle} className="text-pink-600 text-2xl rounded-lg px-8 py-4 border-2 border-pink-600 hover:bg-pink-600 hover:text-white font-bold">Get Started Today</button>
         </div>
       </div>
       <div className="flex flex-col relative z-10 mt-10 mb-20">

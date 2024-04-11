@@ -4,6 +4,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { RiTwitterXLine } from "react-icons/ri";
 import { SlSocialFacebook } from "react-icons/sl";
 import { ImPinterest2 } from "react-icons/im";
+import { FaYoutube } from "react-icons/fa6";
 import { useState } from "react";
 import Link from "next/link";
 export default function Footer() {
@@ -22,12 +23,12 @@ export default function Footer() {
             <div className="flex flex-col gap-y-6">
                 <div className="flex">
                     <div className="mr-36">
-                        <h1 style={someStyle} className="text-4xl text-pink-600">Your vision.</h1>
+                        <h1 style={someStyle} className="text-5xl text-pink-600">Your vision.</h1>
                     </div>
                 </div>
                 <div className="ml-36">
                     <div>
-                        <h1 style={someStyle} className="text-4xl text-pink-600">Our execution.</h1>
+                        <h1 style={someStyle} className="text-5xl text-pink-600">Our execution.</h1>
                     </div>
                 </div>
             </div>
@@ -37,7 +38,7 @@ export default function Footer() {
                     <h1 style={someStyle} className="text-white text-2xl">Our skilled event planners are dedicated to creating unforgettable experiences for you</h1>
                 </div>
                 <div className="w-2/5 flex justify-center items-center text-center">
-                    <button style={someStyle} className="bg-white px-12 py-4 text-pink-600 text-bold text-2xl rounded-lg">Get Started Today</button>
+                    <Link href="/contact-us" style={someStyle} className="bg-white px-12 py-4 text-pink-600 text-bold text-2xl rounded-lg">Get Started Today</Link>
                 </div>
             </div>
             <div className="flex justify-center text-center items-center gap-10">
@@ -48,7 +49,7 @@ export default function Footer() {
                         width={130}
                         height={130}
                     />
-                    <h1 className="px-14">We&apos;re expert event planners, fusing art, vision, and perfection to craft satisfying experiences tailored to your needs.</h1>
+                    <h1 className="px-14 text-xl">We're expert event planners, fusing art, vision, and perfection to craft satisfying experiences tailored to your needs.</h1>
                 </div>
                 <div className="flex h-full w-1/5">
                     <div className="flex flex-col gap-y-6 w-11/12 py-2">
@@ -85,7 +86,7 @@ export default function Footer() {
                 <div className="w-2/5 flex flex-col gap-y-6">
                     <div className="flex flex-col gap-y-6 justify-center text-center items-center">
                         <h1 style={someStyle} className="text-2xl">Email Us</h1>
-                        <h1 style={someOtherStyle} className="text-xlw-3/5">mannevents@gmail.com</h1>
+                        <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=mannevents@gmail.com"><h1 style={someOtherStyle} className="text-xlw-3/5">mannevents@gmail.com</h1></Link>
                     </div>
                     <div className="flex flex-col gap-y-6 justify-center text-center items-center">
                         <h1 style={someStyle} className="text-2xl">Office Address</h1>
@@ -101,22 +102,17 @@ export default function Footer() {
                 </div>
                 <div>
                 <Link href="/">
-                    <span className="text-4xl"><RiTwitterXLine /></span>
-                </Link>
-                </div>
-                <div>
-                <Link href="/">
                     <span className="text-4xl"><SlSocialFacebook /></span>
                 </Link>
                 </div>
                 <div>
                 <Link href="/">
-                    <span className="text-4xl"><ImPinterest2 /></span>
+                    <span className="text-4xl"><FaYoutube /></span>
                 </Link>
                 </div>
             </div>
             <div>
-                <h1 style={someOtherStyle} className="text-xl">Copyright 2024 <span>&copy;</span> Mann Events Pvt. Ltd.</h1>
+                <h1 style={someOtherStyle} className="text-xl">Copyright 2024 <span>&copy;</span> <span className="font-bold">Mann Events Pvt. Ltd.</span></h1>
             </div>
         </div>
     )
