@@ -60,7 +60,7 @@ export default function AboutUs() {
         </div>
         <div className="grid grid-cols-4 px-6 gap-x-6 justify-center text-center items-center">
             {OurServicesImages.map((item,index)=>(
-                <div key={index} className="border border-pink-600 gap-y-6 rounded-lg px-4 py-4 flex flex-col h-5/6">
+                <div key={index} className="border border-pink-600 rounded-lg px-4 py-1 flex flex-col h-5/6 justify-between">
                     <Image
                         src={item.imagelink}
                         alt="Background Image"
