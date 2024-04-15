@@ -49,7 +49,7 @@ export default function Footer() {
                         width={130}
                         height={130}
                     />
-                    <h1 className="px-14 text-xl">We're expert event planners, fusing art, vision, and perfection to craft satisfying experiences tailored to your needs.</h1>
+                    <h1 className="px-14 text-xl">We&apos;re expert event planners, fusing art, vision, and perfection to craft satisfying experiences tailored to your needs.</h1>
                 </div>
                 <div className="flex h-full w-1/5">
                     <div className="flex flex-col gap-y-6 w-11/12 py-2">
