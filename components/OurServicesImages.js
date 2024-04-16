@@ -60,7 +60,7 @@ export let OurServicesImages = [
         text : "Honeymoon"
     },
     {
-        imagelink : "/hospitality.jpg",
+        imagelink : "/peservices.jpg",
         text : "Post Event Services"
     },
 ]
